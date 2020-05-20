@@ -7,4 +7,7 @@ This repository is a collection of useful little functions and solutions to clas
 ### Why?
 
 This repository serves as a place of reference to help with questions one may have about  implementing basic things in C. 
+
+### Note:
+Comments are being updated to make the algorithms more understandable.  
 #
