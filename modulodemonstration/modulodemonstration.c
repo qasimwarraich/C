@@ -7,7 +7,7 @@
 //  5 %  2 =  1 :because 2*2 = 4 and the remainder is 1.
 // -5 %  2 = -1 :because 2*-2 = -4 and the remainder is -1.
 // -5 % -2 = -1 :because -2*2 = -4 and the remainder is -1.
-//  5 % -2 =  1 :because -2*-2 = 4 and the remnainder is 1.  
+//  5 % -2 =  1 :because -2*-2 = 4 and the remainder is 1.  
 
 
 int main(){
