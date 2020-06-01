@@ -12,7 +12,7 @@
  */ 
 
 int tail(int n, int storedres){
-    if (n == 0){return storedres;}
+    if (n == 1){return storedres;}
     return tail(n-1, n * storedres);
 }
  
