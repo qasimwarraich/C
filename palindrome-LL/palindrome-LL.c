@@ -12,22 +12,24 @@ struct ListNode {
     struct ListNode *next;
 };
 
-struct ListNode* reverse(struct ListNode* head){
-        struct ListNode* curr = head;  
-        struct ListNode* next;
-        struct ListNode* prev = NULL;  
-        while (curr != NULL){
-            next = curr -> next;
-            curr -> next = prev; 
-            prev = curr;
-            curr = next; 
-        }
+struct ListNode* reverse(struct ListNode* head)
+{
+    struct ListNode* curr = head;  
+    struct ListNode* next;
+    struct ListNode* prev = NULL;  
+    while (curr != NULL){
+        next = curr -> next;
+        curr -> next = prev; 
+        prev = curr;
+        curr = next; 
+    }
     head = prev; 
     return head; 
 } 
 
 
-bool isPalindrome(struct ListNode* head){
+bool isPalindrome(struct ListNode* head)
+{
     //  Simple cases:
     // Empty list or one element.
     if (head == NULL || head -> next == NULL) return true;
