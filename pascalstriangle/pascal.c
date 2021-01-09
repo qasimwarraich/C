@@ -6,7 +6,6 @@
 /* Factorial function, recursive multiplication of number with predecessor.
  * __int128 is to keep accuracy when dealing with larger factorials. 
  */
-
 __int128 factorial(int x){
     if (x==0) return 1;
     return x * factorial(x-1);
