@@ -1,10 +1,10 @@
 #include <stdio.h> 
 
 /*
- * In this example implementation we use pointer airemetic to manipulate the
+ * In this example implementation we use pointer arithmetic to manipulate the
  * string s through the function reversestring. The function uses a temp
  * variable to swap elements on opposite sides of the string. The while loop
- * terminates when the the iterators i and j cross each other. 
+ * terminates when the iterators i and j cross each other. 
  */
 
 void reversestring(char* s, int size)
