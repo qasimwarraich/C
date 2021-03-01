@@ -1,0 +1,9 @@
+CC = gcc
+CFLAGS = -g -Wall -pedantic
+
+
+all:
+	${CC} makescript.c ${CFLAGS}
+
+clean:
+	rm -f a.out 
