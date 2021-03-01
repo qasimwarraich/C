@@ -69,7 +69,7 @@ void makefilescript(char filename[MAXLENGTH])
 
 /* Searches supplied filename for the dot, and then compares the string form
  * that point vs the .c file extention. It only returns true when the specified
- * filename is exactly ".c" 
+ * filename's extention is exactly ".c" 
  */
 bool inputsanitiser(const char* str)
 {
