@@ -10,7 +10,7 @@
 const int MAXLENGTH = 1000;
 
 void makefilescript(char* filename);
-bool inputsanitiser(const char* string);
+bool inputsanitiser(char* string);
 
 
 int main(int argc, char *argv[])
@@ -28,10 +28,6 @@ int main(int argc, char *argv[])
             printf("Error: Please supply a filename\n");
             return 1;
         }
-
-        /* Trick for removing trailing \n and extraneous chars */
-        filename[strcspn(filename, "\n")] = 0;
-        filename[strcspn(filename, " ")] = 0;
     }
     else if (argc > 2){
         printf("Error: Too many arguments\n Please supply only one argument\n");
@@ -54,7 +50,6 @@ int main(int argc, char *argv[])
 
 void makefilescript(char filename[MAXLENGTH])
 {
-    char file[MAXLENGTH];
     FILE *output = fopen("Makefile","w");
     fputs("CC = gcc\n", output);
     fputs("CFLAGS = -g -Wall -pedantic\n\n\n", output);
@@ -71,8 +66,13 @@ void makefilescript(char filename[MAXLENGTH])
  * that point vs the .c file extention. It only returns true when the specified
  * filename's extention is exactly ".c" 
  */
-bool inputsanitiser(const char* str)
+bool inputsanitiser(char* str)
 {
+
+    /* Trick for removing trailing \n and extraneous chars */
+    str[strcspn(str, "\n")] = 0;
+    str[strcspn(str, " ")] = 0;
+
     char* dot = strchr(str,'.');
     if (dot != NULL){
         if (strcmp(dot, ".c") == 0) return true;
