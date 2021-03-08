@@ -3,7 +3,7 @@
 #include <stdbool.h>
 
 /* This program generates a barebones Makefile to assist for compiling simple
- * C projects. It recieves a filename either from stdin or as a command line
+ * C projects. It receives a filename either from stdin or as a command line
  * argument. This is then used to write a Makefile. 
  */
 
