@@ -26,7 +26,7 @@ void heapify(int a[], int parent, int len)
     /* If the parent is not the maximum then swap the parent with bigger child and reheapify. 
      * Notice what was previously a child becomes the new parent to be examined for heap condition.
      */
-    if(maximum != parent) {
+    if(maximum != parent){
         swap(&a[parent],&a[maximum]);
         heapify(a, maximum, len);
     }
