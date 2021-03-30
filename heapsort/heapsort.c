@@ -10,9 +10,9 @@ void swap(int *x, int *y)
 
 void heapify(int a[], int parent, int len)
 {
-    /* parent = index of last non leaf node.  
+    /* parent = index of last non leaf node.
      * Set current parent node index to maximum and find children (lc & rc).
-     */ 
+     */
     int maximum = parent;
     int lc = 2 * parent + 1;
     int rc = 2 * parent + 2;
@@ -23,7 +23,7 @@ void heapify(int a[], int parent, int len)
     if(rc < len && a[rc] > a[maximum])
         maximum = rc;
 
-    /* If the parent is not the maximum then swap the parent with bigger child and reheapify. 
+    /* If the parent is not the maximum then swap the parent with bigger child and reheapify.
      * Notice what was previously a child becomes the new parent to be examined for heap condition.
      */
     if(maximum != parent){
@@ -34,7 +34,7 @@ void heapify(int a[], int parent, int len)
 
 void heapsort(int a[], int len)
 {
-    /* Build Max Heap starting from last non leaf node. */ 
+    /* Build Max Heap starting from last non leaf node. */
     for(int i = len / 2 - 1; i >= 0; i--)
         heapify(a, i, len);
 
@@ -47,14 +47,15 @@ void heapsort(int a[], int len)
 
 int main()
 {
-    /* Initialisation */  
+    /* Initialisation */
     int array[] = {2,9,3,420,1,5,6};
     int len = sizeof(array)/sizeof(array[0]);
 
     heapsort(array,len);
-   
-    /* Printing result */
-    for(int i = 0; i < len; i++) printf(" %d\n",array[i]);
 
-    return 0; 
+    /* Printing result */
+    for(int i = 0; i < len; i++)
+        printf(" %d\n",array[i]);
+
+    return 0;
 }
